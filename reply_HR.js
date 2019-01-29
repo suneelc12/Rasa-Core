@@ -4,7 +4,6 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const deasync = require('deasync');
 var fs = require('fs');
-//var axios = require('axios');
 var core_reply = require('./domain.json');
 //var yml = require('js-yaml')
 //var contents = fs.readFileSync('./domain.json');

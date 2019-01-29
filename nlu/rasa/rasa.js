@@ -12,12 +12,12 @@ var fs = require('fs');
 const dir = path.join(__dirname, '..', '..', 'model','current','nlu\\');
 //const dir = path.join(__dirname, 'default\\');
 console.log(dir);
-fs.readdirSync(dir).forEach(file => {
-    fs.statSync(dir + file).mtime;
-});
-var rasaModelName = fs.readdirSync(dir).sort(function (a, b) {
-    return Date.parse(fs.statSync(dir + a).mtime) < Date.parse(fs.statSync(dir + b).mtime);
-})[0];
+//fs.readdirSync(dir).forEach(file => {
+//    fs.statSync(dir + file).mtime;
+//});
+//var rasaModelName = fs.readdirSync(dir).sort(function (a, b) {
+//    return Date.parse(fs.statSync(dir + a).mtime) < Date.parse(fs.statSync(dir + b).mtime);
+//})[0];
 
 
 //model directory
