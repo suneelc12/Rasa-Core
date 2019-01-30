@@ -100,7 +100,7 @@
             console.log("Received a reply from bot: ");
             console.log(jsonObj);
             ////appendMessage(jsonObj.reply, "bot", jsonObj.intent.name, jsonObj.message);
-            appendMessage(jsonObj.reply, "bot",jsonObj.message);
+            appendMessage(jsonObj.reply.text, "bot",jsonObj.message);
         });
 
         socket.on(messageChannel, function (msg, isUser) {

@@ -10,6 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const deasync = require('deasync');
 const bodyParser = require('body-parser');
 var trainingObj = require('./training.js');
+var axios = require('axios');
 var response;
 db_url = "mongodb://localhost:27017/botdb";
 
@@ -36,8 +37,8 @@ const replyChannel = 'reply';
 
 var json1 = {};
 //json['intent'] = this.intent;
-json1['reply'] = "Hi, I am HR Virtual Assistant, how can I help you ?";
-json1['message'] =message;
+json1['reply'] = { "text": "Hi, I am HR Virtual Assistant, how can I help you ?"};
+json1['message'] = "Hi, I am HR Virtual Assistant, how can I help you ?";
 
 
 app.use(bodyParser.json());
@@ -107,28 +108,37 @@ server.listen(port,function () {
 
 var json = {};
 //json['intent'] = this.intent;
-json['reply'] = response;
-json['message'] = message;
 
-sendToBot = function (message, socket) {  
+sendToBot = async function (message, socket) {  
     body = {
         "sender": "Rasa",
         "message": message
     };
 
-    app.post('http://localhost:5005/webhooks/rest/webhook', body, function (req, res) {
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-        res.setHeader('Access-Control-Allow-Credentials', true);
-        console.log("before response" + res.get('text'));
-        if (JSON.parse(JSON.stringify(res.get('text')))) {
-            console.log("after response" + res.get('text'));
+    response = await axios.post('http://localhost:5005/webhooks/rest/webhook', body);
+    // , function (req, res) {
+    //     res.setHeader('Access-Control-Allow-Origin', '*');
+    //     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    //     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    //     res.setHeader('Access-Control-Allow-Credentials', true);
+    //     console.log("before response" + res.get('text'));
+    //     if (JSON.parse(JSON.stringify(res.get('text')))) {
+    //         console.log("after response" + res.get('text'));
 
-            reponse = JSON.parse(JSON.stringify(res.get("text")));
-        }
-        return response;
-    });
+    //         reponse = JSON.parse(JSON.stringify(res.get("text")));
+    //         json['reply'] = response;
+    //         json['message'] = message;
+    //     }
+    //     return response;
+    // });
+    response = response.data[0];
+    if (JSON.parse(JSON.stringify(response['text']))) {
+        console.log("after response" + response['text']);
+
+        reponse = JSON.parse(JSON.stringify(response['text']));
+        json['reply'] = response;
+        json['message'] = message;
+    }
     socket.emit(replyChannel, json);
 
   //classifier.parse(message, function (error, intent, entities) {
