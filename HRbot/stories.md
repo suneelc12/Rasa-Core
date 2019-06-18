@@ -178,3 +178,33 @@
    - utter_description
    - action_description 
    - utter_goodbye 
+
+## motodocs1
+* greet
+  - utter_greet
+* employee details
+  - action_cardinfo
+* thanks
+    - utter_thanks
+* goodbye
+    - utter_goodbye 
+
+## motodocs1
+* greet
+  - utter_greet
+* notifications
+  - action_cardinfo
+* thanks
+    - utter_thanks
+* goodbye
+    - utter_goodbye 
+
+## motodocs1
+* greet
+  - utter_greet
+* banking details
+  - action_cardinfo
+* thanks
+  - utter_thanks
+* goodbye
+  - utter_goodbye 
