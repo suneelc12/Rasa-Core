@@ -21,9 +21,6 @@
 - reset my password
 - help me in changing password?
 - i want to change my password?
-- help me in changing password?
-- reset my password
-- rest my password
 
 ## intent:deletePO
 - delete RFQ`s/PO`s from CTL
@@ -39,7 +36,6 @@
 - bye
 - thanks,bye
 - ok,bye
-- bye
 
 ## intent:greet
 - hey
@@ -47,9 +43,6 @@
 - good morning
 - good evening
 - hey there
-- hi
-- hello
-- hello
 - hi
 
 ## intent:help
@@ -76,7 +69,6 @@
 - ok,thanks
 - thanks
 - thankyou
-- ok,thanks
 
 ## intent:userid
 - user id is [abel.tuter](userid)
