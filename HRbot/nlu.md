@@ -90,3 +90,44 @@
 - [suneel](userid)
 - [suneel](userid)
 - [GIS](enabled)
+
+## intent:cardinformation
+- need information related to CITI cards
+- provide some information regarding CITI cards
+- where do i find info related to CITI cards?
+- send me info related to CITI cards?
+- can you give me information related to CITI cards?
+
+## intent:employee details
+- help me with iexpense employee details
+- i want iexpense employee details
+- provide me iexpense employee details
+- iexpense employee details
+
+## intent:banking details
+- help me in updating banking details
+- how to update banking details
+- bank details update
+- do you mind help updating me in banking details?
+- I want to help updating me in banking details
+
+## intent:vacation rules
+- what are vacation rules?
+- rules for setting up vacation
+- how to setup vacation rules
+
+## intent:notifications
+- how to generate response to notification
+- generate workflow notifications
+- send response notifications
+
+## intent:delegation
+- delegation of expense report
+- help me in delegation of expense report
+- procedure for delegating expense report
+- how to delegate expense report
+
+## intent:approval
+- expense reports requires manager approval
+- managers expense requires approval
+- how to get approval for expense details
