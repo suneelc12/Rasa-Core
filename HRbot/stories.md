@@ -8,21 +8,8 @@
     - action_isenabled
 	- slot{"enabled": "GIS"}
     - utter_contact
-* thanks:
+* thanks
     - utter_help
-* goodbye
-    - utter_goodbye
-
-## Generated Story 542309000610180361
-* greet
-    - utter_greet
-* changepassword
-    - utter_userid
-* userid{ "userid": "abel.tuter" }
-    - slot{ "userid": "abel.tuter" }
-    - action_isenabled
-    - slot{ "enabled": "NULL" }
-    - utter_response
 * goodbye
     - utter_goodbye
 
@@ -36,7 +23,7 @@
     - action_isenabled
 	- slot{"enabled": "EXIST"}
     - utter_resetpassword
-* thanks:
+* thanks
     - utter_help
 * goodbye
     - utter_goodbye
