@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Chatbot with socket.io",
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "body-parser": "^1.18.3",
         "cookie-parser": "^1.4.3",
         "deasync": "^0.1.13",
